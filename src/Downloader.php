@@ -16,14 +16,10 @@ class Downloader
      */
     public function downloadFile()
     {
-        $client = new Client([
-            'verify' => false
-        ]);
+        $image = file_get_contents(self::DOWNLOAD_URL);
 
-        $res = $client->get(self::DOWNLOAD_URL, [
-            'save_to' => storage_path('vietnam-zone.xls')
-        ]);
+        file_put_contents(public_path('vietnam-zone.xls'), $image);
 
-        return $res->getStatusCode() == 200 ? storage_path('vietnam-zone.xls') : null;
+        return public_path('vietnam-zone.xls');
     }
 }
