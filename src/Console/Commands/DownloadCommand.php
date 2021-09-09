@@ -3,10 +3,10 @@
 namespace Kingfox\VietnamZone\Console\Commands;
 
 use Illuminate\Console\Command;
-use Illuminate\Support\Facades\File;
 use Kingfox\VietnamZone\Downloader;
-use Kingfox\VietnamZone\Imports\VienamZoneImport;
+use Illuminate\Support\Facades\File;
 use Maatwebsite\Excel\Facades\Excel;
+use Kingfox\VietnamZone\Imports\VietnamZoneImport;
 
 class DownloadCommand extends Command
 {
@@ -35,7 +35,7 @@ class DownloadCommand extends Command
 
         $this->info('Importing...');
 
-        Excel::import(new VienamZoneImport(), $tmpFile);
+        Excel::import(new VietnamZoneImport(), $tmpFile);
 
         File::delete($tmpFile);
 
