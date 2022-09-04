@@ -17,7 +17,7 @@
         "illuminate/database": "^5.8|^6|^7|^8|^9",
         "illuminate/console": "^5.8|^6|^7|^8|^9",
         "guzzlehttp/guzzle": "^6.3.1|^7.0",
-        "maatwebsite/excel": "4.0.x-dev"
+        "maatwebsite/excel": "4.0"
     },
     "extra": {
         "laravel": {
